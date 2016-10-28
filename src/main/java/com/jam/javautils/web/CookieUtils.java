@@ -1,4 +1,4 @@
-package com.github.javautils.web;
+package com.jam.javautils.web;
 
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;

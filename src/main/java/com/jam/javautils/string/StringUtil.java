@@ -1,11 +1,11 @@
-package com.github.javautils.string;
-
-import com.github.javautils.encrypt.EncryptionUtil;
-import com.github.javautils.regular.Regular;
+package com.jam.javautils.string;
 
 import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
+import com.jam.javautils.encrypt.EncryptionUtil;
+import com.jam.javautils.regular.Regular;
 
 public class StringUtil {
 

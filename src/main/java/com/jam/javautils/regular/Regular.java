@@ -1,4 +1,4 @@
-package com.github.javautils.regular;
+package com.jam.javautils.regular;
 
 /**
  * Created by tomoya on 16/8/31.

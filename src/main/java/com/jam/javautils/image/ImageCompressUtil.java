@@ -1,4 +1,4 @@
-package com.github.javautils.image;
+package com.jam.javautils.image;
 
 import com.sun.image.codec.jpeg.JPEGCodec;
 import com.sun.image.codec.jpeg.JPEGEncodeParam;

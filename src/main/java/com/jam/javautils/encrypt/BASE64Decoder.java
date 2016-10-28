@@ -1,4 +1,4 @@
-package com.github.javautils.encrypt;
+package com.jam.javautils.encrypt;
 
 import java.io.IOException;
 import java.io.InputStream;

@@ -1,10 +1,10 @@
-package com.github.javautils.math;
-
-import com.github.javautils.string.StringUtil;
+package com.jam.javautils.math;
 
 import java.math.BigDecimal;
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
+
+import com.jam.javautils.string.StringUtil;
 
 /**
  * 工具类-BigDecimal

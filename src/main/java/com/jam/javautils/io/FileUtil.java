@@ -1,4 +1,4 @@
-package com.github.javautils.io;
+package com.jam.javautils.io;
 
 import java.io.File;
 

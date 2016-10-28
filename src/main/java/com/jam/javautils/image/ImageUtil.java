@@ -1,7 +1,4 @@
-package com.github.javautils.image;
-
-import com.github.javautils.encrypt.BASE64Decoder;
-import com.github.javautils.encrypt.BASE64Encoder;
+package com.jam.javautils.image;
 
 import java.awt.AlphaComposite;
 import java.awt.Graphics2D;
@@ -18,6 +15,9 @@ import java.io.OutputStream;
 
 import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
+
+import com.jam.javautils.encrypt.BASE64Decoder;
+import com.jam.javautils.encrypt.BASE64Encoder;
 
 /**
  * 图片处理工具类

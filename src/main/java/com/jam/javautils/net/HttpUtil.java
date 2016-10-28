@@ -1,9 +1,10 @@
-package com.github.javautils.net;
-
-import com.github.javautils.string.StringUtil;
+package com.jam.javautils.net;
 
 import javax.net.ssl.*;
 import javax.servlet.http.HttpServletRequest;
+
+import com.jam.javautils.string.StringUtil;
+
 import java.io.*;
 import java.net.HttpURLConnection;
 import java.net.URL;

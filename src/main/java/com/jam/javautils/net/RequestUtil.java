@@ -1,8 +1,8 @@
-package com.github.javautils.net;
-
-import com.github.javautils.string.StringUtil;
+package com.jam.javautils.net;
 
 import javax.servlet.http.HttpServletRequest;
+
+import com.jam.javautils.string.StringUtil;
 
 /**
  * Created by tomoya on 16/9/27.

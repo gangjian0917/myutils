@@ -1,13 +1,13 @@
-package com.github.javautils.date;
-
-import com.github.javautils.Constants;
-import com.github.javautils.string.StringUtil;
+package com.jam.javautils.date;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.TimeZone;
+
+import com.jam.javautils.Constants;
+import com.jam.javautils.string.StringUtil;
 
 /**
  * Created by tomoya.
