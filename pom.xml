@@ -19,7 +19,7 @@
     <distributionManagement>
         <repository>
             <id>maven-repo</id>
-            <url>file:/Users/jam/git/github/java-utils/repo</url>
+            <url>file:C:/Users/jamesd/.m2/repository/</url>
         </repository>
     </distributionManagement>
 
