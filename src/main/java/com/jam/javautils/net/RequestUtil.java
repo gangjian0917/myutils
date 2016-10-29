@@ -5,7 +5,7 @@ import javax.servlet.http.HttpServletRequest;
 import com.jam.javautils.string.StringUtil;
 
 /**
- * Created by tomoya on 16/9/27.
+ * Created by eclipse on 16/9/27.
  */
 public class RequestUtil {
 

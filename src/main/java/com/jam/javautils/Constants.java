@@ -1,7 +1,7 @@
 package com.jam.javautils;
 
 /**
- * Created by tomoya on 16/8/31.
+ * Created by eclipse on 16/8/31.
  */
 public interface Constants {
 

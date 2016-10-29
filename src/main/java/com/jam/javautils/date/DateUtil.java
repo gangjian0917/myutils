@@ -10,9 +10,8 @@ import com.jam.javautils.Constants;
 import com.jam.javautils.string.StringUtil;
 
 /**
- * Created by tomoya.
+ * Created by eclipse.
  * Copyright (c) 2016, All Rights Reserved.
- * http://tomoya.cn
  */
 public class DateUtil {
 
