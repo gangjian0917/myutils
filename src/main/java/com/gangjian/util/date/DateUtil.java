@@ -1,4 +1,4 @@
-package com.jam.javautils.date;
+package com.gangjian.util.date;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -6,8 +6,8 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.TimeZone;
 
-import com.jam.javautils.Constants;
-import com.jam.javautils.string.StringUtil;
+import com.gangjian.util.Constants;
+import com.gangjian.util.string.StringUtil;
 
 /**
  * Created by eclipse.

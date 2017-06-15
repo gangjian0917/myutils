@@ -1,4 +1,4 @@
-package com.jam.javautils;
+package com.gangjian.util;
 
 /**
  * Created by eclipse on 16/8/31.

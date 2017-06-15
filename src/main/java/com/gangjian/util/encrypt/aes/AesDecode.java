@@ -1,4 +1,4 @@
-package com.jam.javautils.encrypt.aes;
+package com.gangjian.util.encrypt.aes;
 
 import java.io.UnsupportedEncodingException;
 import java.security.InvalidAlgorithmParameterException;
@@ -11,7 +11,7 @@ import javax.crypto.IllegalBlockSizeException;
 import javax.crypto.NoSuchPaddingException;
 import javax.crypto.spec.SecretKeySpec;
 
-import com.jam.javautils.encrypt.BASE64Decoder;
+import com.gangjian.util.encrypt.BASE64Decoder;
 
 public class AesDecode {
 	public static void main(String[] args) throws Exception {

@@ -1,4 +1,4 @@
-package com.jam.javautils.web;
+package com.gangjian.util.web;
 
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
@@ -6,17 +6,17 @@ import javax.servlet.http.HttpServletResponse;
 
 public final class CookieUtils {
 
-    private HttpServletRequest request;
-    private HttpServletResponse response;
+	private HttpServletRequest request;
+	private HttpServletResponse response;
 
-    public CookieUtils(HttpServletRequest request, HttpServletResponse response) {
-        this.request = request;
-        this.response = response;
-    }
+	public CookieUtils(HttpServletRequest request, HttpServletResponse response) {
+		this.request = request;
+		this.response = response;
+	}
 
-    /**
-     * Get cookie value by cookie name.
-     */
+	/**
+	 * Get cookie value by cookie name.
+	 */
 	public String getCookie(String name, String defaultValue) {
 		Cookie cookie = getCookieObject(name);
 		return cookie != null ? cookie.getValue() : defaultValue;
@@ -83,10 +83,17 @@ public final class CookieUtils {
 
 	/**
 	 * Set Cookie.
-	 * @param name cookie name
-	 * @param value cookie value
-	 * @param maxAgeInSeconds -1: clear cookie when close browser. 0: clear cookie immediately.  n>0 : max age in n seconds.
-	 * @param isHttpOnly true if this cookie is to be marked as HttpOnly, false otherwise
+	 * 
+	 * @param name
+	 *            cookie name
+	 * @param value
+	 *            cookie value
+	 * @param maxAgeInSeconds
+	 *            -1: clear cookie when close browser. 0: clear cookie
+	 *            immediately. n>0 : max age in n seconds.
+	 * @param isHttpOnly
+	 *            true if this cookie is to be marked as HttpOnly, false
+	 *            otherwise
 	 */
 	public void setCookie(String name, String value, int maxAgeInSeconds, boolean isHttpOnly) {
 		doSetCookie(name, value, maxAgeInSeconds, null, null, isHttpOnly);
@@ -94,9 +101,14 @@ public final class CookieUtils {
 
 	/**
 	 * Set Cookie.
-	 * @param name cookie name
-	 * @param value cookie value
-	 * @param maxAgeInSeconds -1: clear cookie when close browser. 0: clear cookie immediately.  n>0 : max age in n seconds.
+	 * 
+	 * @param name
+	 *            cookie name
+	 * @param value
+	 *            cookie value
+	 * @param maxAgeInSeconds
+	 *            -1: clear cookie when close browser. 0: clear cookie
+	 *            immediately. n>0 : max age in n seconds.
 	 */
 	public void setCookie(String name, String value, int maxAgeInSeconds) {
 		doSetCookie(name, value, maxAgeInSeconds, null, null, null);
@@ -111,11 +123,19 @@ public final class CookieUtils {
 
 	/**
 	 * Set Cookie to response.
-	 * @param name cookie name
-	 * @param value cookie value
-	 * @param maxAgeInSeconds -1: clear cookie when close browser. 0: clear cookie immediately.  n>0 : max age in n seconds.
-	 * @param path see Cookie.setPath(String)
-	 * @param isHttpOnly true if this cookie is to be marked as HttpOnly, false otherwise
+	 * 
+	 * @param name
+	 *            cookie name
+	 * @param value
+	 *            cookie value
+	 * @param maxAgeInSeconds
+	 *            -1: clear cookie when close browser. 0: clear cookie
+	 *            immediately. n>0 : max age in n seconds.
+	 * @param path
+	 *            see Cookie.setPath(String)
+	 * @param isHttpOnly
+	 *            true if this cookie is to be marked as HttpOnly, false
+	 *            otherwise
 	 */
 	public void setCookie(String name, String value, int maxAgeInSeconds, String path, boolean isHttpOnly) {
 		doSetCookie(name, value, maxAgeInSeconds, path, null, isHttpOnly);
@@ -123,10 +143,16 @@ public final class CookieUtils {
 
 	/**
 	 * Set Cookie to response.
-	 * @param name cookie name
-	 * @param value cookie value
-	 * @param maxAgeInSeconds -1: clear cookie when close browser. 0: clear cookie immediately.  n>0 : max age in n seconds.
-	 * @param path see Cookie.setPath(String)
+	 * 
+	 * @param name
+	 *            cookie name
+	 * @param value
+	 *            cookie value
+	 * @param maxAgeInSeconds
+	 *            -1: clear cookie when close browser. 0: clear cookie
+	 *            immediately. n>0 : max age in n seconds.
+	 * @param path
+	 *            see Cookie.setPath(String)
 	 */
 	public void setCookie(String name, String value, int maxAgeInSeconds, String path) {
 		doSetCookie(name, value, maxAgeInSeconds, path, null, null);
@@ -134,14 +160,25 @@ public final class CookieUtils {
 
 	/**
 	 * Set Cookie to response.
-	 * @param name cookie name
-	 * @param value cookie value
-	 * @param maxAgeInSeconds -1: clear cookie when close browser. 0: clear cookie immediately.  n>0 : max age in n seconds.
-	 * @param path see Cookie.setPath(String)
-	 * @param domain the domain name within which this cookie is visible; form is according to RFC 2109
-	 * @param isHttpOnly true if this cookie is to be marked as HttpOnly, false otherwise
+	 * 
+	 * @param name
+	 *            cookie name
+	 * @param value
+	 *            cookie value
+	 * @param maxAgeInSeconds
+	 *            -1: clear cookie when close browser. 0: clear cookie
+	 *            immediately. n>0 : max age in n seconds.
+	 * @param path
+	 *            see Cookie.setPath(String)
+	 * @param domain
+	 *            the domain name within which this cookie is visible; form is
+	 *            according to RFC 2109
+	 * @param isHttpOnly
+	 *            true if this cookie is to be marked as HttpOnly, false
+	 *            otherwise
 	 */
-	public void setCookie(String name, String value, int maxAgeInSeconds, String path, String domain, boolean isHttpOnly) {
+	public void setCookie(String name, String value, int maxAgeInSeconds, String path, String domain,
+			boolean isHttpOnly) {
 		doSetCookie(name, value, maxAgeInSeconds, path, domain, isHttpOnly);
 	}
 
@@ -166,7 +203,8 @@ public final class CookieUtils {
 		doSetCookie(name, null, 0, path, domain, null);
 	}
 
-	private void doSetCookie(String name, String value, int maxAgeInSeconds, String path, String domain, Boolean isHttpOnly) {
+	private void doSetCookie(String name, String value, int maxAgeInSeconds, String path, String domain,
+			Boolean isHttpOnly) {
 		Cookie cookie = new Cookie(name, value);
 		cookie.setMaxAge(maxAgeInSeconds);
 		// set the default path value to "/"
