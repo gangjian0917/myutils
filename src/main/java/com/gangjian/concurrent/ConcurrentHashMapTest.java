@@ -1,7 +1,6 @@
 package com.gangjian.concurrent;
 
-import java.util.HashMap;
-import java.util.UUID;
+import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * <Java并发编程的艺术> chapter 6
@@ -14,31 +13,11 @@ import java.util.UUID;
 public class ConcurrentHashMapTest {
 
 	// hashMap并发测试
-	public static void hashMapTest() {
-		final HashMap<String, String> map = new HashMap<String, String>(2);
-		Thread t = new Thread(new Runnable() {
-			@Override
-			public void run() {
-				for (int i = 0; i < 100000000; i++) {
-					new Thread(new Runnable() {
-						@Override
-						public void run() {
-							map.put(UUID.randomUUID().toString(), "");
-						}
-					}).start();
-				}
-			}
-		});
-
-		t.start();
-		try {
-			t.join();
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
+	public static void concurrentHashMapTest() {
+		ConcurrentHashMap map = new ConcurrentHashMap();
 	}
 
 	public static void main(String[] args) {
-		hashMapTest();
+		concurrentHashMapTest();
 	}
 }
