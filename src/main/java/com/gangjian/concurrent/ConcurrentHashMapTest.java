@@ -1,5 +1,7 @@
 package com.gangjian.concurrent;
 
+import java.util.Hashtable;
+
 /**
  * <Java并发编程的艺术> chapter 6
  * 
@@ -18,7 +20,7 @@ public class ConcurrentHashMapTest {
 	public static void main(String[] args) {
 		concurrentHashMapTest();
 		System.out.println(Integer.MAX_VALUE);
-
+		new Hashtable<>();
 		System.out.println(Integer.parseInt("0001111", 2) & 15);
 		System.out.println(Integer.parseInt("0011111", 2) & 15);
 		System.out.println(Integer.parseInt("0111111", 2) & 15);
